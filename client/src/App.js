@@ -24,7 +24,7 @@ function App() {
     <div>
       <Router>
         <nav className="container">
-          <h1>React Exercise</h1>
+          <h1>Exercise Gear Store</h1>
           <img src={gym} alt="weight lifter icon" width="8%" />
 
           <ul className="steps">

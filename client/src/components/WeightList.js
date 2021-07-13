@@ -10,7 +10,7 @@ export default class WeightList extends Component {
     };
   }
   componentDidMount() {
-    axios.get("http://localhost:3333/weights").then((res) => {
+    axios.get("https://exercise-be.herokuapp.com/weights").then((res) => {
       console.log(res.data.weightsData);
       this.setState({
         weights: res.data.weightsData,
@@ -23,11 +23,7 @@ export default class WeightList extends Component {
     return (
       <main className="weight-list">
         {this.state?.weights?.map((weight) => (
-          <div
-            data-testid="weight-card"
-            className="weight-card"
-            key={weight.id}
-          >
+          <div className="weight-card" key={weight.id}>
             <img className="weight-image" src={weight.img} alt={weight.name} />
             <div className="weight-details">
               <h2 className="weight-name">{weight.name}</h2>
